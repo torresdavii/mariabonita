@@ -1,0 +1,1635 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.menu.adm {
+    top: -50px;
+}
+
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* all similar content styling codes */
+section {
+    padding: 100px 0;
+}
+
+.max-width {
+
+    max-width: 1300px;
+    padding: 0 40px;
+    margin: auto;
+}
+
+.max-width-adm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pratos {
+    height: 650px;
+
+    color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.920), rgba(0, 0, 0, 0.920)), url('../img/sessionpratos.jpg');
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+#bebidas {
+    color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.920), rgba(0, 0, 0, 0.920)), url('../img/sessionbebidas.jpg');
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.clientes,
+.pedidos,
+.pratos,
+.skills,
+.teams,
+.contact {
+    font-family: 'Poppins', sans-serif;
+}
+
+svg {
+    margin-left: 2px;
+}
+
+.clientes .clientes-content,
+.pedidos .serv-content,
+.pratos .pratos-content,
+.skills .skills-content,
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title {
+    margin: 0 20px;
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+section .subtitle {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    text-align: center;
+}
+
+
+
+.back a i {
+    margin: 20px;
+}
+
+.back {
+    position: absolute;
+    left: 40px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+
+
+.submenu.sticky {
+    border: none;
+    background: #3e733b;
+}
+
+
+
+.logo {
+    position: fixed;
+    left: 30px;
+    width: 200px;
+    height: 30px;
+}
+
+
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.submenu a {
+    display: block;
+    padding: 5px 0;
+    color: #FFFFFF;
+}
+
+
+/* Correção para manter o menu alinhado */
+.menu ul {
+    position: relative;
+    display: none;
+}
+
+
+/* menu btn styling */
+
+.menu .menu-cart {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #3e733b;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-up-btn:hover {
+    filter: brightness(90%);
+}
+
+
+/* home section styling */
+.home {
+    display: flex;
+    position: relative;
+    /* Necessário para o posicionamento do pseudo-elemento */
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+    flex-wrap: wrap;
+    overflow: hidden;
+    /* Para evitar que o pseudo-elemento ultrapasse os limites da div */
+}
+
+.home::before {
+    content: '';
+    /* Necessário para o pseudo-elemento */
+    position: absolute;
+    /* Posiciona o pseudo-elemento */
+    top: 0;
+    /* Alinha ao topo */
+    left: 0;
+    /* Alinha à esquerda */
+    right: 0;
+    /* Alinha à direita */
+    bottom: 0;
+    /* Alinha à parte inferior */
+    background-image: url('../img/admin.png');
+    /* A imagem de fundo */
+    background-size: cover;
+    /* Ajusta a imagem para cobrir todo o elemento */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Impede que a imagem se repita */
+    filter: brightness(0.3);
+    /* Aplica um filtro à imagem (ajuste a intensidade como necessário) */
+    z-index: 0;
+    /* Coloca o pseudo-elemento abaixo do conteúdo */
+}
+
+.home>* {
+    /* Seleciona todos os elementos filhos da div .home */
+    position: relative;
+    /* Necessário para que os filhos fiquem acima do pseudo-elemento */
+    z-index: 1;
+    /* Coloca os filhos acima do pseudo-elemento */
+}
+
+
+.home .max-width {
+    margin: auto 0 auto 30px;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.text-2 img {
+    width: 100px;
+    height: 110px;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: crimson;
+    font-weight: 500;
+}
+
+.home .home-content a {
+    display: inline-block;
+    background: #3e733b;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid #3e733b;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover {
+    color: #fff;
+    background: none;
+}
+
+.home .arrow {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    flex-wrap: wrap;
+    bottom: 5%;
+    left: calc(50% - 25px);
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.home .arrow span {
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    background: #3e733b77;
+    border-radius: 90px;
+    padding: 3px;
+    animation: animate 2s 3;
+    position: relative;
+}
+
+
+
+@keyframes animate {
+    0% {
+        top: 0px;
+        animation-delay: 2s;
+    }
+
+    50% {
+        top: 8px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+/* clientes section styling */
+
+.clientes .clientes-content .left {
+    width: 45%;
+}
+
+.clientes .clientes-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.clientes .clientes-content .right {
+    width: 55%;
+}
+
+.clientes .clientes-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.clientes .clientes-content .right .text span {
+    color: #3e733b;
+}
+
+.clientes .clientes-content .right p {
+    text-align: justify;
+}
+
+.clientes .clientes-content .right a {
+    display: inline-block;
+    background: #3e733b;
+    /* ---------------------------------------------------*/
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #3e733b;
+    transition: all 0.3s ease;
+}
+
+.clientes .clientes-content .right a:hover {
+    color: #3e733b;
+    background: none;
+}
+
+.clientes .clientes-content,
+.clientes .clientes-content .scroll {
+    justify-content: center;
+}
+
+/* pedidos section styling */
+.pedidos,
+.teams {
+    color: #fff;
+    background: #111;
+}
+
+.pedidos .serv-content .card {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pedidos .pratos .serv-content .card:hover {
+    background: #3e733b;
+}
+
+.pedidos .pratos .serv-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.pedidos .pratos .serv-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.pedidos .pratos .serv-content .card i {
+    font-size: 50px;
+    color: #3e733b;
+    transition: color 0.3s ease;
+}
+
+.pedidos .pratos .serv-content .card:hover i {
+    color: #fff;
+}
+
+.pedidos .pratos .serv-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* pratos section styling */
+
+.teams {
+    color: #fff;
+    background: #111;
+}
+
+.pratos .pratos-content .card {
+    min-height: 240px;
+    width: calc(33% - 20px);
+    background: #222;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pratos .pratos-content .card:hover {
+    background: #3e733b;
+}
+
+.pratos .pratos-content .card .box {
+    display: grid;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.pratos .pratos-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.pratos .pratos-content .card i {
+    font-size: 50px;
+    color: #3e733b;
+    transition: color 0.3s ease;
+}
+
+.pratos .pratos-content .card:hover i {
+    color: #fff;
+}
+
+.pratos .pratos-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.text p {
+    font-size: 20pt;
+}
+
+/* skills section styling */
+
+.skills .skills-content .column {
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .left p {
+    text-align: justify;
+}
+
+.skills .skills-content .left a {
+    display: inline-block;
+    background: #3e733b;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #3e733b;
+    transition: all 0.3s ease;
+}
+
+.skills .skills-content .left a:hover {
+    color: #3e733b;
+    background: none;
+}
+
+.skills .skills-content .right {
+    /*-----------------------------------*/
+    width: 45%;
+}
+
+.skills .skills-content .right img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* teams section styling */
+.teams .title::after {
+    content: "who with me";
+}
+
+.teams .carousel .card {
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover {
+    background: #3e733b;
+}
+
+.teams .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover .box {
+    transform: scale(1.05);
+}
+
+.teams .carousel .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.teams .carousel .card img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #3e733b;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover img {
+    border-color: #fff;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid #3e733b !important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: #3e733b !important;
+}
+
+/* contact section styling */
+.contact .title::after {
+    content: "get in touch";
+}
+
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content .left p {
+    text-align: justify;
+}
+
+.contact .contact-content .left .icons {
+    margin: 10px 0;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i {
+    font-size: 25px;
+    color: #3e733b;
+}
+
+.contact .contact-content .info .head {
+    font-weight: 500;
+}
+
+.contact .contact-content .info .sub-title {
+    color: #333;
+}
+
+.contact .right form .fields {
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact .right form .textarea {
+    height: 80px;
+    width: 100%;
+}
+
+.contact .right form .name {
+    margin-right: 10px;
+}
+
+.contact .right form .email {
+    margin-left: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
+    border-color: #b3b3b3;
+}
+
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button {
+    height: 47px;
+    width: 170px;
+}
+
+.contact .right form .button button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #3e733b;
+    background: #3e733b;
+    color: #fff;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact .right form .button button:hover {
+    color: #3e733b;
+    background: none;
+}
+
+
+/* Estilo para o menu verde */
+.adm {
+    background: linear-gradient(to left, #193516, #34a82e);
+    /* Cor verde */
+    font-family: 'Ubuntu', sans-serif;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    /* Fixar a navbar */
+    top: 0;
+    /* Fica no topo da página */
+    width: 100%;
+    z-index: 99999;
+    /* Para garantir que fique acima de outros elementos */
+}
+
+
+.adm h1 {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    display: inline-block;
+}
+
+.adm h1:hover {
+    cursor: pointer;
+}
+
+.adm .icon {
+    font-size: 18px;
+    margin-left: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.adm .icon.rotate {
+    transform: rotate(180deg);
+}
+
+/* Espaço adicional para o conteúdo abaixo da navbar */
+.content {
+    margin-top: 80px;
+    /* Espaço para não ficar atrás da navbar */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo do menu suspenso */
+.submenu-adm {
+    font-family: 'Ubuntu', sans-serif;
+    display: none;
+    background: linear-gradient(to left, #193516, #34a82e);
+    text-align: left;
+    padding: 10px;
+    position: fixed;
+    /* Para que o submenu fique fixo */
+    top: 60px;
+    /* Distância da navbar */
+    left: 50%;
+    /* Centralizar */
+    transform: translateX(-50%);
+    /* Para compensar a centralização */
+    z-index: 999;
+    /* Para ficar acima de outros elementos */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    opacity: 0;
+    /* Para animação */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Transição suave */
+    transform: translate(-50%, -10px);
+    /* Efeito de animação */
+    text-underline-offset: 5px;
+
+}
+
+.submenu-adm.show {
+    margin-top: 10px;
+    display: flex;
+    /* Torna visível */
+    opacity: 1;
+    /* Totalmente visível */
+    transform: translate(-50%, 0);
+    /* Efeito de animação */
+}
+
+/* Organizando os submenus em linha com flexbox */
+.submenu-adm ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.submenu-adm ul li {
+    margin: 0px 20px;
+    padding: 10px;
+    color: white;
+    font-weight: 800;
+    position: relative;
+}
+
+.submenu-adm ul li:hover {
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    /* Cor do sublinhado */
+    text-decoration-style: solid;
+    /* Estilo do sublinhado (sólido, pontilhado, wavy, etc.) */
+    text-decoration-thickness: 2px;
+    /* Espessura do sublinhado */
+    cursor: pointer;
+}
+
+/* Estilo dos submenus internos */
+.submenu-adm ul li ul {
+    display: none;
+    position: absolute;
+    top: 40px;
+    /* Distância do submenu principal */
+    left: 0;
+    background: linear-gradient(to left, #193516, #34a82e);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    width: 170px;
+    z-index: 1;
+    border-radius: 8px;
+    /* Bordas arredondadas */
+}
+
+.submenu-adm ul li:hover ul {
+    display: block;
+}
+
+.submenu-adm ul li ul li {
+    padding: 10px;
+    color: white;
+}
+
+/*pedidos*/
+.subtabela {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.1s ease-out;
+}
+
+.subtabela-ativa {
+    max-height: 500px;
+    /* Ajuste conforme necessário */
+    transition: max-height 1.1s ease-out;
+
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+}
+
+/*contato*/
+section#contato {
+    padding: 10px;
+    margin: 0;
+    max-width: 100vw;
+    background-color: #000000;
+}
+
+.max-width.contato {
+    padding: 0;
+}
+
+.contato {
+    display: flex;
+    flex-wrap: wrap;
+    /* Isso permite que os elementos quebrem para a próxima linha quando necessário */
+    justify-content: flex-end;
+}
+
+.coluna-esquerda {
+    flex: 1;
+    min-width: 250px;
+    /* Define um tamanho mínimo para a coluna */
+}
+
+.coluna-direita {
+    display: flex;
+    justify-content: flex-end;
+    /* Centraliza as imagens */
+}
+
+
+.coluna-direita div {
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    /* Aplica o border-radius no contêiner */
+}
+
+.coluna-direita img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    display: block;
+    /* Remove espaço extra abaixo da imagem */
+}
+
+/* Efeito de zoom interno */
+.coluna-direita img:hover {
+    transform: scale(1.1);
+    /* Aplica o zoom sem afetar o border-radius */
+}
+
+.cima {
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+
+}
+
+
+
+.baixo {
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.dir {
+    border-radius: 20px;
+    margin: 20px;
+
+}
+
+img.whatsapp,
+img.insta,
+img.rede {
+    width: 100%;
+    /* Para garantir que todas as imagens ocupem a mesma largura relativa */
+    max-width: 400px;
+    /* Limite para evitar que fiquem grandes demais */
+}
+
+.esq {
+    max-width: 400px;
+}
+
+.coluna-esquerda {
+    display: grid;
+    background-color: black;
+    border-radius: 20px;
+    margin: 20px;
+    border: 1px solid #3e733b;
+
+}
+
+.coluna-esquerda h1,
+.coluna-esquerda button {
+    margin: 20px;
+}
+
+.coluna-esquerda h1 {
+    font-size: 30pt;
+    font-weight: bolder;
+    height: 100px;
+    margin-top: 60px;
+    margin-block-end: -360px;
+    background-image: linear-gradient(to left, #193516, #34a82e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.btn-contato button {
+    margin-top: -60px;
+    width: 200px;
+    height: 40%;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-whats button:hover,
+.btn-insta button:hover {
+    transform: scale(1.1);
+
+}
+
+.btn-whats button {
+    background-image: url('../img/btn-whatsapp.png');
+    height: 80px;
+    color: #fff;
+    font-size: 15pt;
+    font-weight: bolder;
+    transition-duration: 0.4s;
+
+}
+
+
+.btn-insta button {
+    background-image: url('../img/btn-instagram.png');
+    height: 80px;
+    color: #fff;
+    font-size: 15pt;
+    font-weight: bolder;
+    transition-duration: 0.4s;
+
+}
+
+.btn-contato {
+    margin-top: -60px;
+    justify-content: center;
+    display: grid;
+    text-align: center;
+    align-items: center;
+}
+
+/*modal contato*/
+.close {
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: -50px;
+    color: #fff;
+    border: 1px solid #FFF;
+    padding: 0 8px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-adm {
+    display: none;
+    position: fixed;
+    align-content: center;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: none;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.651);
+}
+
+.modal-content {
+    display: flex;
+    position: relative;
+    /* Importante para o span seguir */
+    background-color: #fcf9f4;
+    margin: 0 auto;
+    padding: 30px;
+    height: 400px;
+    width: 32%;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content.insta {
+    width: 50%;
+}
+
+
+.modal-content img {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+}
+
+.modal-content form h2 {
+    font-size: 15pt;
+    color: #3e733b;
+    font-weight: bolder;
+}
+
+.modal-content form input[type="text"] {
+    margin-top: 10px;
+    margin-block-end: 10px;
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    border: 1px solid #3e733b;
+}
+
+.modal-content form input[type="submit"] {
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(to left, #193516, #34a82e);
+    border: none;
+    transition-duration: 0.3s;
+    color: #fff;
+}
+
+.modal-content form input[type="submit"]:hover {
+    transform: scale(1.1);
+}
+
+
+
+/*tabelas*/
+
+/* Estilo geral da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: 800;
+    font-size: 13pt;
+    background: linear-gradient(90deg, #193516, #34a82e);
+}
+
+th,
+td {
+    padding: 25px;
+    color: white;
+    border: 10px solid white;
+}
+
+/* Estilo do cabeçalho */
+thead th {
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo ao passar o mouse sobre a célula */
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Efeito de destaque ao passar o mouse na linha e coluna */
+td:hover,
+th:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Destaca célula atual */
+}
+
+td:hover::before,
+th:hover::before,
+td:hover::after,
+th:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+td:hover::before,
+th:hover::before {
+    width: 100vw;
+    /* Destaque para a linha completa */
+    left: 0;
+}
+
+td:hover::after,
+th:hover::after {
+    height: 100vh;
+    /* Destaque para a coluna completa */
+    top: 0;
+    width: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+td:hover::after {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Destaque da célula ativa */
+}
+
+tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.1);
+    /* Cores alternadas para as linhas */
+}
+
+ul a {
+    color: white;
+}
+
+/*button table*/
+.button-table {
+    display: flex;
+    margin: 20px 10px;
+    justify-content: space-between;
+}
+
+.button-table button {
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: #3e733b;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* responsive media query start */
+@media (max-width: 1300px) {
+    .home .max-width {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1275px) {
+    .contato {
+        flex-direction: column;
+    }
+
+    .coluna-esquerda {
+        min-height: 600px;
+    }
+
+    .coluna-direita {
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1180px) {
+    .pratos {
+        min-height: 900px;
+    }
+
+    .pratos .pratos-content .card {
+        margin: 20px auto;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .clientes .clientes-content .left img {
+        height: 350px;
+        width: 350px;
+    }
+
+    .skills .skills-content .right img {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .scroll {
+        margin: 20px;
+        overflow-x: scroll;
+    }
+
+    .pratos .pratos-content .card {
+        max-width: 500px;
+        width: 450px;
+    }
+
+    .pratos {
+        min-height: 1300px;
+    }
+
+    .url {
+        width: 300px;
+        /* Largura máxima do contêiner */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        direction: rtl;
+        text-align: left;
+        /* Garante que o texto seja alinhado à esquerda */
+    }
+
+
+}
+
+
+
+
+
+@media (max-width: 947px) {
+
+
+    .modal-adm .modal-content {
+        width: 50%;
+    }
+
+    .menu-icon {
+        width: 30px;
+        position: fixed;
+        left: 20px;
+        cursor: pointer;
+    }
+
+    .menu-icon .bar {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    .back {
+        display: none;
+    }
+
+    .menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        /* Mostra o menu em todas as telas */
+        flex-direction: column;
+        background-color: #3e733b;
+        position: fixed;
+        top: 0;
+        left: -250px;
+        /* Menu escondido à esquerda fora da tela */
+        height: 100%;
+        width: 250px;
+        transition: left 0.3s ease;
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 20px;
+        border-bottom: 1px solid #fff;
+    }
+
+    .menu ul {
+        display: block;
+        width: 230px;
+        display: 999999;
+    }
+
+    .adm .menu li .menu-btn {
+        text-decoration: none;
+        padding: 0 30px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+        display: contents;
+    }
+
+    .adm .menu li {
+        list-style: none;
+        margin: 0 30px;
+        display: inline-block;
+    }
+
+    .menu.adm .menu.show-menu {
+        left: 250px;
+        /* Traz o menu para dentro da tela */
+    }
+
+    /* Overlay para cobrir o conteúdo quando o menu está aberto */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 9999;
+    }
+
+    .show-overlay {
+        display: block;
+        z-index: 999;
+    }
+
+
+    .home .home-content .text-2 {
+        font-size: 70px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+
+    .home .home-content a {
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+
+    .max-width {
+        max-width: 930px;
+    }
+
+    .clientes .clientes-content .column {
+        width: 100%;
+    }
+
+    .clientes .clientes-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .clientes .clientes-content .right {
+        flex: 100%;
+    }
+
+
+
+    .skills .skills-content .column,
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .skills .skills-content .right {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .topo {
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
+
+    .direita {
+        display: grid;
+        margin: 15px 41px;
+    }
+
+    .esquerda {
+        display: grid;
+        justify-content: center;
+        width: 50%;
+        margin: 15px 40px;
+    }
+
+}
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0 23px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 60px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 32px;
+    }
+
+    .home .home-content a {
+        font-size: 20px;
+    }
+
+    .contato .coluna-direita {
+        display: none;
+    }
+
+    .submenu-adm.show ul li .descricao-menu {
+        display: none;
+    }
+
+    .submenu-adm.show {
+        max-width: 700px;
+        width: 60%;
+        justify-content: center;
+    }
+
+    .submenu-adm.show ul {
+        display: block;
+    }
+
+    .submenu-adm.show ul li {
+        padding: 20px;
+        font-size: 15pt;
+    }
+
+    .modal-adm .modal-content {
+        width: 70%;
+    }
+
+}
+
+
+
+
+@media (max-width: 585px) {
+    .pratos .pratos-content .card {
+        max-width: 500px;
+        width: 380px;
+    }
+
+    .cardapio-item2 {
+        width: 80%;
+    }
+    .url {
+        width: 200px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2 {
+        font-size: 50px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 27px;
+    }
+
+    .clientes .clientes-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 19px;
+    }
+
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
+
+    .scroll-up-btn {
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
+
+@media (max-width: 485px) {
+    .pratos .pratos-content {
+        margin: auto;
+        width: 90%;
+        justify-content: center;
+    }
+
+    .pratos .pratos-content .card {
+        width: 90%;
+    }
+
+
+}
+
+
+@media (max-width: 360px) {
+    .clientes .clientes-content .left img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .skills .skills-content .right img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 305px) {
+    .clientes .clientes-content .left img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .skills .skills-content .right img {
+        height: 250px;
+        width: 250px;
+    }
+}

@@ -1,0 +1,474 @@
+/*estilos para a página do carrinho*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+body {
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+
+}
+
+.max-width {   
+    margin: 0;
+}
+
+section#about {
+    width: 100vw;
+    height: 100%;
+}
+
+.carrinho {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.seu_pedido {
+    width: 50%;
+    margin: 0px 30px 30px 30px;
+}
+
+.seu_pedido h1 {
+    margin: 0 20px;
+}
+
+.remover_pedido h1 {
+    margin-top: 20px;
+}
+
+.resumo_compra {
+    width: 50%;
+    margin: 0px 30px 30px 30px;
+}
+
+
+.seu_pedido h1,
+.resumo_compra h1 {
+    text-align: left;
+
+}
+
+.remover_pedido {
+    svg {
+        width: 15px;
+    }
+}
+
+a svg {
+    width: 20px;
+}
+
+.conteiner {
+    width: 95%;
+    display: block;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.132);
+}
+
+.img_carrinho img {
+    border-radius: 5px;
+    margin: 20px 0px 20px 20px;
+
+}
+
+.dados_pedido {
+    display: grid;
+    align-items: center;
+    margin: 20px;
+}
+
+
+
+h2 {
+    font-size: 15pt;
+    color: #3e733b;
+}
+
+h4 {
+    display: flex;
+    margin: 20px;
+    font-size: 10pt;
+    font-weight: 300;
+    color: rgb(121, 121, 121);
+    ;
+}
+
+h4 span {
+    margin: 20px;
+}
+
+.dados_pedido h3 {
+
+    font-size: 10pt;
+    color: rgb(121, 121, 121);
+    font-weight: lighter;
+
+}
+
+h3 p {
+    margin-top: 10px;
+    margin-block-end: 5px;
+}
+
+.remover_pedido {
+    margin: 20px 20px 20px 0px;
+}
+
+.cima {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.baixo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteiner hr {
+    background-color: rgb(221, 221, 221);
+    border-radius: none;
+    border: none;
+    padding: 1px;
+    margin-top: 0px;
+    margin: 0 auto;
+    width: 92%;
+    justify-items: center;
+}
+
+.quant {
+    justify-content: center;
+}
+
+.nmr {
+    margin: 2px 10px 0px 10px;
+    border: 1px black;
+}
+
+.valor {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    margin: 20px;
+}
+
+
+
+.backpai {
+    width: 100vw;
+    justify-content: space-between;
+    display: flex;
+
+}
+
+.back {
+    text-align: center;
+    position: static;
+    z-index: 1000;
+    border-radius: 8px;
+    outline: none;
+    margin: 0px 20px 20px 20px;
+
+}
+
+.back a {
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    color: #3e733b;
+    position: relative;
+
+}
+
+.back a:visited {
+    text-decoration: none;
+    color: #3e733b;
+}
+
+
+
+.back a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 1px;
+    right: 0;
+    background: #3e733b;
+    transition: width 0.4s ease;
+    -webkit-transition: width 0.4s ease;
+}
+
+.back a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #3e733b;
+}
+
+/*resumo da compra*/
+
+
+.resumo_content {
+    margin-top: 20px;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.resumo_content hr {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.dados label {
+    font-size: 10pt;
+}
+
+.dados input,
+.dados select {
+    padding: 5px;
+    border: 1px solid rgb(121, 121, 121);
+    ;
+    outline: none;
+    color: rgb(121, 121, 121);
+    ;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.dados button {
+    width: 250px;
+    margin: auto;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #3e733b;
+    background-color: #3e733b;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.dados button:hover {
+    transform: scale(1.1);
+}
+
+.dados svg {
+    width: 20px;
+    margin: 8px 0px 0px 5px;
+
+}
+
+.dados button h1 {
+    margin-block-end: 10px;
+    margin-top: -4px;
+    text-align: center;
+    color: #fff;
+}
+
+.mensagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60vh;
+}
+
+.mensagem .mensagem-content {
+    display: block;
+    margin-top: 80px;
+}
+
+.mensagem img {
+    width: 100px;
+}
+
+.mensagem h5,
+.mensagem p,
+.mensagem a {
+    margin: 10px;
+}
+
+.mensagem h5 {
+    font-size: 15pt;
+}
+
+.mensagem p {
+    margin-block-end: 50px;
+    color: #555;
+    font-weight: 200;
+    font-size: 12pt;
+}
+
+.mensagem a {
+    margin: 40px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #3e733b;
+    color: #3e733b;
+    font-weight: 500;
+}
+
+/*rodape*/
+footer {
+    display: grid;
+    background: #111;
+    padding: 15px 0;
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px;
+}
+
+footer span a {
+    color: #3e733b;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+footer hr {
+    width: 100%;
+    height: 1px;
+    border: none;
+    padding: 0;
+    background-color: #888;
+    margin-block-end: 15px;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 70px;
+    color: #888;
+    font-family: 'Poppins', sans-serif;
+}
+
+.rodape-about h4,
+.rodape-redes h4,
+.rodape-menu h4 {
+    font-weight: 600;
+    font-size: 20pt;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    text-align: left;
+}
+
+.rodape .rodape-img img {
+    margin-top: 30px;
+    width: 200px;
+    margin-right: 50px;
+    filter: brightness(0.4);
+}
+
+.rodape-about {
+    text-align: left;
+    margin-right: 50px;
+}
+
+.rodape-redes a {
+    display: inline;
+    padding: 10px;
+}
+
+.rodape-redes {
+    margin-right: 30px;
+}
+
+.rodape-menu {
+    text-align: left;
+    color: #888;
+}
+
+
+
+.rodape-menu a h3 {
+    color: #888;
+    font-size: 13pt;
+    font-weight: lighter;
+    margin-block-end: 10px;
+
+}
+
+.rodape-about hr,
+.rodape-redes hr,
+.rodape-menu hr {
+    width: 30px;
+    height: 3px;
+    padding: 2px;
+    border-radius: 5%;
+    background-color: #888;
+    margin: 0 0 20px 0;
+    border: none;
+}
+
+.copyright {
+    color: #888;
+}
+
+.rodape-about h2,
+.rodape-about p {
+    color: #888;
+    font-family: 'Poppins', sans-serif;
+}
+
+.rodape-about p {
+    font-size: 12pt;
+
+}
+
+/*responsividade*/
+@media (max-width: 1055px) {
+    .carrinho {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .cima {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+    .remover_pedido {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 690px) {
+    .seu_pedido {
+        margin: 0 30px 30px 10px;
+        width: 90%;
+    }
+    .resumo_compra {
+        width: 85%;
+    }
+    
+    
+}
+
+@media (max-width: 577px) {
+}
+
+@media (max-width: 577px) {
+    
+
+    footer {
+        padding: 30px 20px;
+    }
+
+    .rodape .rodape-menu {
+        display: none;
+    }
+    .rodape {
+        justify-content: center;
+    }
+}
